@@ -8,7 +8,9 @@
     "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
-    "db": "yarn db:pull && yarn db:generate"
+    "db": "yarn db:pull && yarn db:generate",
+    "db:pull": "yarn prisma db pull",
+    "db:generate": "yarn prisma generate"
   },
   "pre-commit": [
     "ts.check",
