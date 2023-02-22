@@ -9,7 +9,7 @@ export const userLoginService = async (email: string) => {
         const last_login = new Date()
         let user = await checkUserService(email)
 
-        const id: any = user?.u_id
+        const id = user?.u_id
         if (user) {
             await prisma.$queryRaw`UPDATE tbl_users SET last_login = ${last_login} WHERE id = ${id}`
         }
