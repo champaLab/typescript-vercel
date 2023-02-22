@@ -6,9 +6,9 @@
   "scripts": {
     "start": "nodemon public/index.js",
     "dev": "nodemon src/index.ts",
-    "build": "rimraf dist && tsc",
+    "build": "rimraf public && tsc",
     "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist",
+    "add-build": "git add public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "pre-commit": [
